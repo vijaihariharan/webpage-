@@ -1,0 +1,351 @@
+
+body{
+    font-family:Open Sans, sans-serif;
+    font-weight: 600;
+    line-height: 20px;
+    margin: 0;
+    font-size: 15px;
+}
+.navbar{
+    display: flex;
+    padding: 10px;
+    background-color:#A8D0E6;
+    justify-content: space-between;
+
+}
+.brand{
+    margin: auto;
+    font-family: Lobster,cursive;
+    font-size: 30px;
+    font-weight: 600;
+
+}
+
+
+.brand,.nav-link,a
+{
+    color: #05386B;
+    font-weight: 500;
+}
+.navitems{
+    display:flex;
+    margin:0px;
+    padding: 0px;
+    list-style: none;
+
+}
+
+
+.navitems,.nav-link{
+    text-decoration: none;
+    padding-left: 15px;
+    margin: auto;
+
+}
+.dropdown{
+    display:none;
+}
+/************* header **************/
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+img.header-img{
+    width: 180px;
+    height: 180px;
+    padding: 4rem 0 1rem 0;
+    border-radius: 60%;
+
+}
+.name-header{
+    font-size:20px;
+    font-weight: 600;
+    margin: 0;
+    
+    backface-visibility:visible;
+    animation-name: moveinright;
+    animation-duration: 3s;
+    
+    
+}
+
+@keyframes moveinright
+{
+    0%{
+        opacity: 0;
+      transform: translateX(80px); /*rotate(-40deg);*/
+        
+    }
+    70%{
+     transform: translateX(-15px);/* rotate(60deg);*/
+    }
+    100%{
+        opacity: 2;
+        transform:translateX(0px);
+    }
+    }
+    
+}
+/********************** section*****************/
+
+section{
+    background-color: #c0c5ce;
+    margin: 0px;
+    padding: 3rem 2rem;
+    align-content: center;
+}
+.container{
+    display: block;
+    margin: auto;
+    max-width: 900px;
+    display:block;
+    align-items: center;
+}
+
+.graph-charts{
+    display:flex;
+    flex-direction: row;
+    padding: 4rem 2rem;    
+}
+
+.graph-charts-2{
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 1rem 1rem;
+}
+
+
+img.graph-icon-left, img.graph-icon-right{
+    width:200px;
+    height:200px;
+    display: flex;
+
+}
+div.graphsec{
+    display: flex;
+    justify-content: center;
+    flex: 2;
+}
+div.graph-text-sec-left, div.graph-text-sec-right{
+    display:flex;
+    justify-content: center;
+    flex: 2;
+}
+
+.graph-icon-left,div.graph-text-sec-left
+{  
+    order: 1;
+}
+.graph-icon-right,div.graph-text-sec-right 
+{
+    order: 2;
+
+}
+/********* section-button ***************/
+.quote-btn-wrapper{
+    display: flex;
+    justify-content: center; 
+}
+button.quote-button
+{
+    font-size: 20px;
+    font-weight: 100;
+    background-color:#0088be;
+    color: #ffffff;
+    border: 0px;
+    box-shadow: 0px 1px 9px 0px rgba(0,0,0,0.88);
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+}
+/******************* portfolio *****************/
+.port-folio{
+    display: block;
+    margin: 0;
+    background-color: #D6D2B5;
+}
+
+.port-header{
+    text-align:center;
+    font-weight: 400;
+    padding: 2rem 1rem;
+    margin: auto;
+    animation-name: moveinleft;
+    animation-duration: 3s;
+
+}
+
+@keyframes moveinleft{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    80%{
+        opacity: .5;
+        transform: translateX(15px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+h2.header{
+    text-align: center;
+}
+.port-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.port-wrapper{
+    max-width:25%;
+    align-items: center;
+    display:block;
+    /*    transition:.5s ease-in-out;*/
+}
+.port-object{
+    padding: 1rem  1rem;
+    text-align: center;
+}
+
+.company-details{
+    margin: auto;
+    padding: 5px;
+}
+.company-details h3{
+    text-align: center;
+    margin: 0;
+    font-weight:bold; 
+}
+
+.port-object:hover{
+    cursor:pointer;
+    transform:scale(1.02);
+
+}
+/********* conatct form ***********/
+.contact-header{
+    text-align: center;
+}
+.form-text{
+    margin: .5rem;
+}
+.form-control{
+    max-width: 800px;
+    width: 100%;
+    border-radius: 3px;
+    padding: 2px 1px;;
+    border-color: black;
+    color: gray;
+    font-size: 14px;
+    display: block;
+    border: 1px solid #ced4da;
+    background-clip: padding-box;
+}
+.submit-button{
+    margin:0px;
+    margin: auto;
+    text-align: center;
+}
+button.submit{
+    font-size: 13px;
+    margin-top: 1rem;
+    
+}
+@media(max-width:650px)
+{
+    .brand{
+        margin: 0px;
+        text-align: center;
+    }
+
+    nav.navbar,ul.navitems {
+        display: block;
+
+    }
+    ul.navitems li a.nav-link{
+        display:none;
+    }
+    ul.navitems li.dropdown{
+        display: block;
+        position: absolute;
+        top: 8px;
+        right: 10px;
+
+
+    }
+
+    ul.navitems li.dropdown button{
+        background-color:#05386B;
+        color:#A8D0E6;
+        border:0px;
+        border-radius: 4px;
+        font-size: 17px;
+        margin: auto;
+
+    }
+    ul.navitems.apend li a.nav-link
+    {
+        display:block;
+        text-align: right;
+    }
+    ul.navitems.apend {
+        margin-top: 15px;
+        padding: 8px;
+
+    }
+    ul.navitems.apend {
+        line-height: 2;
+    }
+    /*********** section **************/
+    .graph-charts,.graph-charts-2{
+        flex-direction: column;
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+
+    }
+    .graph-charts-2{
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        text-align: center;
+    }
+    .graph-text-sec-left,.graph-icon-left{
+        order: 1;
+    }
+    .graph-text-sec-right,.graphsec{
+        order: 2;
+    }
+
+
+    /*********** port folio ************/
+
+    div.port-wrapper{
+        max-width: 250px;
+    }
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
